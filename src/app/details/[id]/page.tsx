@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./details.module.css";
 import { extractYouTubeId } from "../../helper/helper";
-import noProfile from "../../assets/no_profile.png";
+import noProfile from "../../assets/no_profile_image.png";
 
 export default function ArticleDetails({ params }: { params: { id: string } }) {
   const router = useRouter();
