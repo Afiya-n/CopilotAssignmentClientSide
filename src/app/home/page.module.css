@@ -18,15 +18,16 @@
 } */
 
 .header {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
+  gap: 18px;
   margin-bottom: 16px;
-  align-items: end;
+  align-items: center;
+  justify-content: end;
 }
 
 .dropdown {
-  display: flex;
+  display: gird;
   flex-direction: column;
   gap: 4px;
 }
@@ -47,13 +48,13 @@
 
 .header div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .refreshButton {
 
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #ce3426;
   color: white;
   border: none;
   border-radius: 4px;
@@ -61,12 +62,12 @@
   font-weight: 600;
   font-size: 16px;
   transition: background-color 0.3s;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', sans-serif;
   &:hover {
-    background-color: #0056b3;
+    background-color: #ce3426;
   }
   &:active {
-    background-color: #004494;
+    background-color: #ce3426;
   };
 
   @media screen and (max-width: 768px) {
@@ -94,11 +95,12 @@
 }
 
 .articleImage {
-  width: 100px;
-  height: calc(100px * 9 / 16);
+  width: 220px;
+  height: 110px;
   /* object-fit: cover; */
   border: 1px solid black;
   border-radius: 12px;
+  margin-right: 16px;
   @media screen and (max-width: 768px) {
       margin-top: 16px;
       width: 100px;

@@ -7,6 +7,22 @@
     gap: 16px;
 }
 
+.backButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ce3426;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 16px;
+    border: none;
+}
+
 .articleImageBox{
     width: 100%;
     display: flex;

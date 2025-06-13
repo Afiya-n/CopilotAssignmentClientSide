@@ -20,20 +20,21 @@ export default function Home() {
   const [allArticles, setAllArticles] = useState<ArticlesProps[]>([]);
 
   useEffect(() => {
-    const loadAllArticles = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/api/articles");
-        const data = await response.json();
-        if (data.status === 1) {
-          setAllArticles(data.data.articles);
-        }
-      } catch (err) {
-        console.error("Error loading full articles:", err);
+  const loadAllArticles = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/api/articles");
+      const data = await response.json();
+      if (data.status === 1) {
+        setAllArticles(data.data.articles);
+        setArticles(data.data.articles); // Initialize articles as well
       }
-    };
+    } catch (err) {
+      console.error("Error loading full articles:", err);
+    }
+  };
 
-    loadAllArticles();
-  }, []);
+  loadAllArticles();
+}, []);
 
   const fetchArticles = async () => {
     const queryParams = new URLSearchParams();
